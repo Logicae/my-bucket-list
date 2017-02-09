@@ -1,8 +1,9 @@
 <form method="post" action="/items/<%=@item.id%>/edit">
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <p>Edit Title:</p>
+  <h3>Edit Title:</h3>
   <input type="text" name="title" value="<%=@item.title%>"> </p>
-  <p>Edit Description:</p>
+  <h3>Edit Description:</h3>
   <input type="text" name="content" value="<%=@item.content%>"> </p>
   <input type="submit" value="Edit Item">
 </form>
+<p><a href="/items"><button type="button">See Entire Bucket List</button></a></p>
