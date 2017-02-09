@@ -6,9 +6,9 @@ My Bucket List is a simple Sinatra application that allows you to create, read, 
 
 License
 
-The license information can be found here: https://github.com/Logicae/national-debt-cli-app/blob/master/LICENSE
+License information can be found here: https://github.com/Logicae/national-debt-cli-app/blob/master/LICENSE
 
-The national-debt-cli-app is licensed under the MIT License.
+My Bucket List is licensed under the MIT License.
 
 Contributions
 
