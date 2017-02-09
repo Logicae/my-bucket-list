@@ -1,11 +1,9 @@
-<a href="/items/new"><button type="button">Create A New Item</button></a>
-<a href="/logout"><button type="button">logout</button></a>
-
-<h2>Hello, <%=@user.username%>!</h1>
-
-<h3>Welcome to your bucket list:</h3>
+<h2>Hello, <%=@user.username%>! Welcome to your bucket list!</h2>
 
 <%@user.items.each do |item|%>
 <a href="/items/<%=item.id%>"><h3><%=item.title%></h3></a>
-<p><%=item.content%></p>
+<p><%=item.content%></p><br>
 <%end%>
+
+<a href="/items/new"><button type="button">Create A New Item</button></a>
+<a href="/logout"><button type="button">logout</button></a>
