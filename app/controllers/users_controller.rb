@@ -56,16 +56,15 @@ class UsersController < ApplicationController
     @item = Item.find(params[:id])
     if logged_in? && @item.user_id == current_user.id
       erb :"items/edit_item"
-    else
-      redirect to "/login"
     end
   end
 
   patch '/items/:id/edit' do
     @item = Item.find(params[:id])
     @item.title = params[:title]
-    @Item.content = params[:content]
+    @item.content = params[:content]
     @item.save
+    redirect to '/items'
   end
 
   delete '/items/:id/delete' do
@@ -73,7 +72,7 @@ class UsersController < ApplicationController
     if logged_in? && @item.user_id == current_user.id
       @item.delete
     end
-      redirect to '/items'
+    redirect to '/items'
   end
 
 end
