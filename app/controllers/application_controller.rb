@@ -22,5 +22,5 @@ class ApplicationController < Sinatra::Base
       !!(session[:id])
     end
   end
-  
+
 end
