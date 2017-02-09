@@ -2,7 +2,7 @@
 
 <%@user.items.each do |item|%>
 <a href="/items/<%=item.id%>"><h3><%=item.title%></h3></a>
-<p><%=item.content%></p><br>
+<p><%=item.content%></p>
 <%end%>
 
 <a href="/items/new"><button type="button">Create A New Item</button></a>
