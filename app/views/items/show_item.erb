@@ -1,3 +1,9 @@
 <h2>Title: <%=@item.title%></h2>
 
 <p>Description: <%=@item.content%></p>
+
+<form method="post" action="/items/<%=@item.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Item">
+</form>
+<p><a href="/items/<%=@item.id%>/edit"><button type="button">Edit Item</button></a></p>
