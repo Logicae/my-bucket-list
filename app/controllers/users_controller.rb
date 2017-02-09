@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params["username"] != "" && params["email"] != "" && params["password"] != ""
-      @user = User.create(username: params["username"], email: params["email"], password: params["password"])
+    @user = User.create(username: params["username"], email: params["email"], password: params["password"])
+    if @user.save  
       session[:id] = @user.id
       redirect to "/items"
     else
