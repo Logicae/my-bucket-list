@@ -2,6 +2,6 @@ Hello, <%=@user.username%>!
 
 Here is your bucket list:
 <%@user.items.each do |item|%>
-<%=item.title%>
-<%=item.content%>
+<h2><%=item.title%></h2>
+<p><%=item.content%></p>
 <%end%>
