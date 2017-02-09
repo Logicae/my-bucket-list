@@ -1,7 +1,11 @@
-Hello, <%=@user.username%>!
+<a href="/items/new"><button type="button">Create A New Item</button></a>
+<a href="/logout"><button type="button">logout</button></a>
 
-Here is your bucket list:
+<h2>Hello, <%=@user.username%>!</h1>
+
+<h3>Welcome to your bucket list:</h3>
+
 <%@user.items.each do |item|%>
-<h2><%=item.title%></h2>
+<a href="/items/<%=item.id%>"><h3><%=item.title%></h3></a>
 <p><%=item.content%></p>
 <%end%>
