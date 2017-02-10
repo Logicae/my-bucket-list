@@ -9,12 +9,13 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    @user = User.create(username: params["username"], email: params["email"], password: params["password"])
+    @user = User.new(username: params["username"], email: params["email"], password: params["password"])
     if @user.save
       session[:id] = @user.id
       redirect to "/items"
     else
-      redirect to "/signup"
+      flash[:message] = "Input did not validate. Please try again."
+      erb :"users/create_user"
     end
   end
 
@@ -32,7 +33,8 @@ class UsersController < ApplicationController
       session[:id] = @user.id
       redirect to "/items"
     else
-      redirect to "/signup"
+      flash[:message] = "Input did not validate. Please try again."
+      erb :"users/login"
     end
   end
 
